@@ -6,5 +6,83 @@
 </head>
 <body>
 
+    <script src="main.js"></script>
+
+    <div id="külső">
+        <div id="kérdés_szöveg">
+            Kérdés szövege
+        </div>
+
+        <div id="középső">
+            <div id="válaszok">
+                <div id="válasz1" onclick="választás(1)" class="kerdes">Válasz 1</div>
+                <div id="válasz2" onclick="választás(2)" class="kerdes kattintható jó">Válasz 2</div>
+                <div id="válasz3" onclick="választás(3)" class="kerdes kattintható rossz">Válasz 3</div>
+            </div>
+            <div id="kép">
+                <img id="kép1"/>
+            </div>
+        </div>
+        <div id="vezérlő">
+            <div id="vissza_gomb" class="gomb kattintható">Vissza</div>
+            <div id="előre_gomb" class="gomb kattintható">Előre</div>
+        </div>
+    </div>
+
+    <style>
+        html, body {
+            height: 100%;
+        }
+
+        div {
+            margin: 10px;
+            border: 1px solid black
+        }
+
+        #külső {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        #kérdés_szöveg {
+        }
+
+        #középső {
+            display: flex;
+            flex-direction: row;
+            flex-grow: 1
+        }
+
+        #válaszok {
+            flex-grow: 1;
+            flex-shrink: 1;
+        }
+
+        #vezérlő {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        #kép {
+            overflow: hidden;
+            flex-shrink: 0;
+        }
+
+        .gomb {
+            padding: 20px;
+            width: 80px;
+        }
+
+        .kerdes {
+        }
+
+
+        .kattintható:hover {
+            background-color: fuchsia;
+            color: white;
+        }
+    </style>
 </body>
-</html>
+</html >
