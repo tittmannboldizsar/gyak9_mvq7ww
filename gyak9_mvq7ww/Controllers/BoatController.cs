@@ -31,5 +31,16 @@ namespace gyak9_mvq7ww.Controllers
 
             return new JsonResult(kérdés);
         }
+
+
+        [HttpGet]
+        [Route("questions/count")]
+        public int MethodQuestionCounter()
+        {
+            HajosContext context = new HajosContext();
+            int kérdésekSzáma = context.Questions.Count();
+
+            return kérdésekSzáma;
+        }
     }
 }
